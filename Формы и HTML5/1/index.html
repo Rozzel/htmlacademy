@@ -7,17 +7,35 @@
 </head>
 <body>
 <form action="/echo" method="post">
-    Имя
+
+    <label for="name">Имя</label>
+    <input type="text" id="name">
+
     <div class="half-width">
-        Дата рождения
+
+        <label for="date">Дата рождения</label>
+        <input type="date" id="date">
     </div>
     <div class="half-width">
-        Цвет
+        <label for="cvet">Цвет</label>
+
+            <select id="cvet">
+                <option selected>Рыжий</option>
+            </select>
     </div>
-    Разрешать гладить
-    Секретное блюдо
+    <label>
+        <input type="checkbox" name="cBox-g" value="гладить" id="gladit">
+        Разрешать гладить
+    </label>
+
+    <label for="password">
+        Секретное блюдо
+    </label>
+    <input type="password" id="password">
+
+
     <div class="buttons">
-        Сохранить
+        <input value="Сохранить" type="submit">
     </div>
 </form>
 </body>
