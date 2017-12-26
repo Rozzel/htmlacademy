@@ -8,24 +8,22 @@
 
 </head>
 <body>
-<header class="page-header">Путевые заметки</header>
+<header class="page-header">localStorage</header>
 <main>
-    <form action="https://htmlacademy.ru/echo" method="post">
+    <form action="#" method="post">
 
-        <label for="text1">Имя</label>
-        <input type="text" id="text1" name="text1" value="Имя">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" value="Имя">
+        <br><br>
+
+        <label for="tel">Телефон</label>
+        <input type="tel"
+               id="tel"
+               name="tel"
+               pattern="+[0-9]{1}([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}"
+               required>
 
 
-        <label for="note1">Текст заметки</label>
-        <textarea id="note1" name="note1" rows="9">Глубине</textarea>
-
-
-        <label for="note2">Текст заметки</label>
-        <textarea id="note2" name="note2" rows="9">Пойми</textarea>
-
-        <div class="buttons">
-            <input type="submit" value="Сохранить">
-        </div>
     </form>
 </main>
 <footer class="page-footer"></footer>
