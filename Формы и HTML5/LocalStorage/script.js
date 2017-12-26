@@ -1,15 +1,19 @@
-if (window.localStorage) {
-    var elements = document.querySelectorAll('[name]');
+function init() {
+    if (window.localStorage) {
+        var elements = document.querySelectorAll('[name]');
 
-    for (var i = 0, length = elements.length; i < length; i++) {
-        (function(element) {
-            var name = element.getAttribute('name');
+        for (var i = 0, length = elements.length; i < length; i++) {
+            (function(element) {
+                var name = element.getAttribute('name');
 
-            element.value = localStorage.getItem(name) || '';
+                element.value = localStorage.getItem(name) || '';
 
-            element.onkeyup = function() {
-                localStorage.setItem(name, element.value);
-            };
-        })(elements[i]);
+                element.onkeyup = function() {
+                    localStorage.setItem(name, element.value);
+                };
+            })(elements[i]);
+        }
     }
 }
+
+window.onload = init;
