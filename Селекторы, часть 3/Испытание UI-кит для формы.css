@@ -63,9 +63,7 @@ input:disabled {
     border-color: #ecf0f1;
 }
 
-input[value*="Неверные"]
-
-/*или же можно использовать [pattern="[0-9]{8}"]*/
+input[pattern="[0-9]{8}"]
     {
     color: #c0392b;
     background: #f2a097;
