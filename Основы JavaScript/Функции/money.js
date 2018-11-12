@@ -1,6 +1,22 @@
-var calculateDeposit = function () {
+var calculateDeposit = function (deposit, percent, duration, capitalization) {
+    var result = deposit;
+    var percentForMonth = percent / 1200;
 
+    for (var i = 1; i <= duration; i++) {
+        if (capitalization) {
+            result += result * percentForMonth;
+        } else {
+        result += deposit * percentForMonth;
+    }
+}
+    return Math.round(result);
 };
+
+
+
+
+var data = [20000, 8, 13, true];
+console.log(calculateDeposit(data[0], data[1], data[2], data[3]));
 
 
 /* Техническое задание
@@ -17,24 +33,4 @@ var calculateDeposit = function () {
 Если вклад простой, то процент годовых делится на 12 и умножается на срок вклада, а затем начальная сумма увеличивается на посчитанный процент.
 
 Вклад с капитализацией считается сложнее: каждый месяц к сумме депозита прибавляются накопленный за месяц процент годовых (не забывай делить процент на 12), а процент следующего месяца считается уже от увеличенной суммы депозита.
-
-*/
-
-/* Предыдущий код
-var calculateDeposit = function ( deposit,
-                                  percent,
-                                  period,
-                                  capitalization ) {
-  if (capitalization) {
-    for (var i = 0 ; i < period ; i++) {
-    deposit += (percent / 100 / 12) * deposit;
-    }
-  } else {
-    deposit = ((percent / 100 / 12) * period * deposit) + deposit;
-  }
-  return Math.round(deposit);
-};
-
-
-calculateDeposit(1000, 8, 3, false);
 */
