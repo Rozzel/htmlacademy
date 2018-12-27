@@ -70,3 +70,17 @@ document.addEventListener('keydown', function(evt) {
 });
 //https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
 //https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
+
+
+// querySelectorAll
+
+var updateCards = function (products) {
+  var elements = document.querySelectorAll('.product');
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    console.log(element);
+    element.classList.add('product--available');    
+  }
+
+};
+
