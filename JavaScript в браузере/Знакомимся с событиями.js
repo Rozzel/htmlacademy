@@ -1,3 +1,11 @@
+button.addEventListener('click', function () {
+  console.log('Клик по кнопке');
+});
+// Сообщение выведется, когда произойдёт событие клика
+//https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+
 // Поиск элемента по тегу
 var list = document.querySelector('ul');
 
