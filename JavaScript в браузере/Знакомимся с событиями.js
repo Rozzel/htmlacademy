@@ -49,3 +49,16 @@ var popup = document.querySelector('.popup');
 
 popup.classList.remove('popup--open');
 // Перед названием класса точка не ставится
+
+document.addEventListener('keydown', function() {
+  // Код отсюда выполнится при каждом нажатии любой клавиши
+});
+
+document.addEventListener('keydown', function(evt) {
+  // Проверяем, что код клавиши равен 27
+  if (evt.keyCode === 27) {
+    // Код отсюда выполнится только при нажатии ESC
+  }
+});
+//https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+//https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
